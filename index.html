@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Histoy | Atlas de Historia Mundial</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">Histoy 🌍</div>
+      <nav>
+        <ul class="main-menu">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#atlas">Atlas interactivo</a></li>
+          <li><a href="#timeline">Línea del tiempo</a></li>
+          <li><a href="#imperios">Imperios</a></li>
+          <li><a href="#personajes">Personajes</a></li>
+          <li><a href="#eventos">Eventos</a></li>
+          <li><a href="#regiones">Regiones</a></li>
+          <li><a href="#aprendizaje">Aprender historia</a></li>
+          <li><a href="#quizzes">Quizzes</a></li>
+          <li><a href="#biblioteca">Biblioteca</a></li>
+        </ul>
+      </nav>
+      <div class="search-wrap">
+        <input type="search" placeholder="Buscar: Roma, Napoleón, 1492..." aria-label="Buscador global" />
+      </div>
+    </header>
+
+    <main>
+      <section id="inicio" class="hero">
+        <div>
+          <p class="eyebrow">Portal principal</p>
+          <h1>Explora la historia del mundo de forma visual e interactiva</h1>
+          <p>
+            Un punto de entrada rápido para descubrir imperios, personajes y grandes eventos desde
+            la Antigüedad hasta el presente.
+          </p>
+          <div class="hero-actions">
+            <a href="#atlas" class="btn primary">🗺️ Ir al atlas</a>
+            <a href="#quizzes" class="btn">🎮 Empezar un quiz</a>
+          </div>
+        </div>
+        <aside class="day-card">
+          <h2>👑 Personaje del día</h2>
+          <p id="personaje-dia">Cargando…</p>
+          <h3>📜 Efemérides de hoy</h3>
+          <ul id="efemerides"></ul>
+        </aside>
+      </section>
+
+      <section id="atlas" class="panel-section">
+        <h2>🗺️ Atlas Histórico Interactivo</h2>
+        <p class="section-intro">Selecciona un año para ver cambios históricos en territorios clave.</p>
+
+        <div class="atlas-grid">
+          <article class="map-card">
+            <h3>🌎 Mapa mundial (demo por regiones)</h3>
+            <div class="map-demo" role="group" aria-label="Regiones interactivas">
+              <button class="map-region" data-region="europa">Europa</button>
+              <button class="map-region" data-region="asia">Asia</button>
+              <button class="map-region" data-region="africa">África</button>
+              <button class="map-region" data-region="america">América</button>
+              <button class="map-region" data-region="medio-oriente">Medio Oriente</button>
+            </div>
+
+            <label for="year-slider">📅 Año: <span id="year-label">476</span></label>
+            <input id="year-slider" type="range" min="-3000" max="2026" value="476" step="1" />
+          </article>
+
+          <aside class="info-card">
+            <h3>🔎 Panel lateral</h3>
+            <div id="atlas-info">
+              <p><strong>Imperio Romano</strong></p>
+              <p>27 a.C – 476 d.C</p>
+              <p>Capital: Roma</p>
+              <p>Población estimada: 60 millones</p>
+            </div>
+            <ul class="actions">
+              <li>Ver historia</li>
+              <li>Ver gobernantes</li>
+              <li>Ver expansión territorial</li>
+              <li>Ver eventos relacionados</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section id="timeline" class="panel-section">
+        <h2>📅 Línea del tiempo global</h2>
+        <ul id="timeline-list" class="timeline"></ul>
+      </section>
+
+      <section id="imperios" class="panel-section compact-grid">
+        <h2>🏛️ Imperios y Civilizaciones</h2>
+        <article>
+          <h3>Por región</h3>
+          <p>Europa · Asia · África · América · Medio Oriente</p>
+        </article>
+        <article>
+          <h3>Por periodo</h3>
+          <p>Antigüedad · Edad Media · Edad Moderna · Edad Contemporánea</p>
+        </article>
+        <article>
+          <h3>Ficha ejemplo: Imperio Romano</h3>
+          <p>Historia, expansión, gobernantes, guerras y datos comparables.</p>
+        </article>
+      </section>
+
+      <section id="personajes" class="panel-section compact-grid">
+        <h2>👑 Personajes Históricos</h2>
+        <article><h3>Categorías</h3><p>Gobernantes, militares, científicos, filósofos y más.</p></article>
+        <article><h3>Ejemplo</h3><p>Julius Caesar: biografía, cronología, logros e impacto.</p></article>
+      </section>
+
+      <section id="eventos" class="panel-section compact-grid">
+        <h2>⚔️ Grandes Eventos Históricos</h2>
+        <article><h3>Categorías</h3><p>Guerras, revoluciones, descubrimientos y tratados.</p></article>
+        <article><h3>Ejemplo</h3><p>French Revolution: causas, desarrollo, consecuencias y personajes.</p></article>
+      </section>
+
+      <section id="regiones" class="panel-section compact-grid">
+        <h2>🌎 Historia por Regiones</h2>
+        <article><h3>Europa</h3><p>Romano, Bizantino, Sacro Imperio, Napoleónico.</p></article>
+        <article><h3>América</h3><p>Azteca, Inca, colonización e independencias.</p></article>
+      </section>
+
+      <section id="aprendizaje" class="panel-section compact-grid">
+        <h2>🧠 Centro de Aprendizaje</h2>
+        <article><p>Resúmenes históricos, mapas conceptuales, cronologías y guías.</p></article>
+      </section>
+
+      <section id="quizzes" class="panel-section compact-grid">
+        <h2>🎮 Juegos y Quizzes</h2>
+        <article><p>¿Quién fue este personaje? · ¿En qué año ocurrió este evento? · Ordena eventos.</p></article>
+        <article><p>Incluye sistema de puntos y ranking de usuarios (fase futura).</p></article>
+      </section>
+
+      <section id="comparador" class="panel-section compact-grid">
+        <h2>📊 Comparador Histórico</h2>
+        <article><p>Compara imperios, guerras y líderes por tamaño, población y duración.</p></article>
+      </section>
+
+      <section id="biblioteca" class="panel-section compact-grid">
+        <h2>📚 Biblioteca de Recursos</h2>
+        <article><p>Libros, documentales, podcasts y artículos académicos.</p></article>
+        <article><p><em>Sapiens</em> · <em>Guns, Germs, and Steel</em></p></article>
+      </section>
+    </main>
+
+    <footer>
+      <p>Histoy · Prototipo inicial del portal de historia mundial.</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
